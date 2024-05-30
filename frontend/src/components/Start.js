@@ -3,12 +3,13 @@ import React, { useContext } from 'react';
 import { SocketContext } from '../SocketContext';
 
 const Start = ({onStart}) => {
-  const { socket, initializeSocket } = useContext(SocketContext);
+  const { socket, initializeSocket, closeSocket } = useContext(SocketContext);
 
   const enterMatchmaking = () => {
     initializeSocket()
     onStart()
   }
+
     return (
       <div className="Start">
         <div>Rock-Paper-Scissor</div>
