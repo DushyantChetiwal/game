@@ -3,6 +3,8 @@ version: '3.8'
 services:
   redis:
     image: redis:latest
+    command: "redis-server && redis-cli FLUSHALL"
+
     healthcheck:
       test: ["CMD-SHELL", "redis-cli ping | grep PONG"]
       interval: 1s

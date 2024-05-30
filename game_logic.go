@@ -1,11 +1,13 @@
 package main
 
-import "github.com/gorilla/websocket"
+import (
+	"github.com/gorilla/websocket"
+)
 
 var choices = map[string]string{
-	"rock":     "scissors",
-	"paper":    "rock",
-	"scissors": "paper",
+	"rock":    "scissor",
+	"paper":   "rock",
+	"scissor": "paper",
 }
 
 func gameLogic(conn *websocket.Conn, p1Choice, p2Choice string) {
